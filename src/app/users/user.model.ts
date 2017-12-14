@@ -7,11 +7,11 @@ export class User {
     this.__id = value;
   }
 
-  public get username(): string {
+  get username(): string {
     return this._username;
   }
 
-  public set username(value: string) {
+  set username(value: string) {
     this._username = value;
   }
 

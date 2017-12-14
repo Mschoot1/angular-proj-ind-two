@@ -8,18 +8,10 @@ import {Subscription} from 'rxjs/Subscription';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit {
-  username(): string {
-    return localStorage.getItem('username');
-  }
-
   constructor(private authService: AuthService, private router: Router) {
   }
 
   ngOnInit() {
-  }
-
-  loggedIn(): boolean {
-    return this.authService.loggedIn();
   }
 
   onLogout() {

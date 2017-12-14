@@ -6,7 +6,7 @@ import {Observable} from 'rxjs/Observable';
 @Injectable()
 export class AuthGuard implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    const loggedIn = this.authService.loggedIn();
+    const loggedIn = AuthService.loggedIn();
     if (!loggedIn) {
       this.router.navigate(['/login']);
     }
