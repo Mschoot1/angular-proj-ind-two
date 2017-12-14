@@ -3,8 +3,6 @@ import {Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {tokenNotExpired} from 'angular2-jwt';
-import {Router} from '@angular/router';
-import {Subject} from 'rxjs/Subject';
 
 interface LoginResponse {
   token: string;
