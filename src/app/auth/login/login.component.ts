@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (AuthService.loggedIn()) {
+    if (this.authService.loggedIn()) {
       this.navigateToHome();
     }
   }
