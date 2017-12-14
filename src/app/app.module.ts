@@ -1,7 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AuthGuard} from './auth/auth-guard.service';
 import {AuthService} from './auth/auth.service';
@@ -11,16 +11,13 @@ import {AppRoutingModule} from './app-routing.module';
 import {LoginComponent} from './auth/login/login.component';
 import {RegisterComponent} from './auth/register/register.component';
 import {HeaderComponent} from './header/header.component';
-import {UsersComponent} from './users/users.component';
-
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     RegisterComponent,
-    LoginComponent,
-    UsersComponent
+    LoginComponent
   ],
   imports: [
     NgbModule.forRoot(),
@@ -33,4 +30,5 @@ import {UsersComponent} from './users/users.component';
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
