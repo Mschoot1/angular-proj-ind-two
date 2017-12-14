@@ -11,13 +11,15 @@ import {AppRoutingModule} from './app-routing.module';
 import {LoginComponent} from './auth/login/login.component';
 import {RegisterComponent} from './auth/register/register.component';
 import {HeaderComponent} from './header/header.component';
+import {CinemasComponent} from './cinemas/cinemas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    CinemasComponent
   ],
   imports: [
     NgbModule.forRoot(),
