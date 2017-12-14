@@ -16,14 +16,14 @@ export class AuthService {
   });
   private serverUrl = environment.serverUrl;
 
-  public static username(): string {
+  username(): string {
     return localStorage.getItem('username');
   }
 
   constructor(private http: HttpClient) {
   }
 
-  public static loggedIn(): boolean {
+  loggedIn(): boolean {
     return tokenNotExpired();
   }
 
