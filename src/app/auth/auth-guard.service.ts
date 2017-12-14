@@ -5,14 +5,14 @@ import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
+  constructor(private authService: AuthService, private router: Router) {
+  }
+
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     const loggedIn = AuthService.loggedIn();
     if (!loggedIn) {
       this.router.navigate(['/login']);
     }
     return loggedIn;
-  }
-
-  constructor(private authService: AuthService, private router: Router) {
   }
 }
