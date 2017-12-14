@@ -1,0 +1,19 @@
+<ng-template [ngIf]="searchQuery">
+  <a routerLink="/movies"><- Back to All</a>
+  <h2>Searchresults for "{{searchQuery}}"</h2>
+</ng-template>
+<div class="row">
+  <div class="col-12">
+    <button style="cursor: pointer;" class="float-right btn btn-default" (click)="onNewMovie()">New Movie</button>
+  </div>
+  <div class="col-12">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let movie of movies;">
+        <a [routerLink]="[movie.title]"
+           [queryParams]="searchQuery ? { searchQuery: searchQuery } : null"
+           routerLinkActive="active">
+          {{movie.title}}</a>
+      </li>
+    </ul>
+  </div>
+</div>

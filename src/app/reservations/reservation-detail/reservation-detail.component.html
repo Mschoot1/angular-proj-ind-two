@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-12">
+    <div ngbDropdown class="d-inline-block float-right">
+      <button style="cursor: pointer;" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Manage Reservation</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button style="cursor: pointer;" class="dropdown-item" (click)="onEditReservation()">Edit Reservation</button>
+        <button style="cursor: pointer;" class="dropdown-item" (click)="onDeleteReservation()">Delete Reservation</button>
+      </div>
+    </div>
+    <h1>{{reservation.amount}}x {{ reservation.schedule.movie.title }}</h1>
+    <p>{{ reservation.schedule.hall.cinema.name }}</p>
+    <p>{{ reservation.schedule.hall.name }}</p>
+    <p>{{ reservation.schedule.dateTime | date:'dd/MM/yyyy HH:mm'}}</p>
+  </div>
+</div>

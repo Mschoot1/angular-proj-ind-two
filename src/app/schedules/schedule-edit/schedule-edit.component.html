@@ -1,0 +1,29 @@
+<form [formGroup]="scheduleForm" (ngSubmit)="onSubmit()">
+  <div formGroupName="movie">
+    <div class="form-group">
+      <label for="title">Movie</label>
+      <select id="title" class="form-control" formControlName="title">
+        <option
+          *ngFor="let movies of movies" [value]="movies.title">{{ movies.title }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div formGroupName="hall">
+    <div class="form-group">
+      <label for="hall">Hall</label>
+      <select id="hall" class="form-control" formControlName="_id">
+        <option
+          *ngFor="let hall of halls" [value]="hall._id">{{ hall.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="dateTime">Date and Time</label>
+    <input type="datetime-local" id="dateTime" class="form-control" formControlName="dateTime">
+  </div>
+  <hr>
+  <button type="submit" class="btn btn-success" [disabled]="scheduleForm.invalid">Save</button>
+  <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+</form>

@@ -1,0 +1,6 @@
+<form class="form-inline">
+  <input class="form-control" type="search" placeholder="Search" id="searchQuery" name="searchQuery" ngModel #searchQuery="ngModel">
+  <button class="btn btn-default" type="submit" routerLink="/movies" [queryParams]="{ searchQuery: searchQuery.value }">Search</button>
+</form>
+<router-outlet></router-outlet>
+<app-movie-list></app-movie-list>

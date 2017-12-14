@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-12">
+    <button style="cursor: pointer;" class="float-right btn btn-default" (click)="onNewReservation()">New Reservation</button>
+  </div>
+  <div class="col-12">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let reservation of reservations;">
+        <a [routerLink]="[reservation._id]"
+           routerLinkActive="active">{{reservation.amount}}x - {{reservation.schedule.movie.title}} -
+          {{reservation.schedule.hall.cinema.name}} - {{reservation.schedule.hall.name}} -
+          {{reservation.schedule.dateTime | date:'dd/MM/yyyy HH:mm'}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
