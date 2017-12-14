@@ -3,9 +3,9 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Reservation} from '../reservation.model';
 import {Schedule} from '../../schedules/schedule.model';
 import {Hall} from '../../halls/hall.model';
-import {Cinema} from '../../../../../angular-proj-ind-two/src/app/cinemas/cinema.model';
 import {Movie} from '../../movies/movie.model';
 import {ReservationService} from '../reservation.service';
+import {Cinema} from '../../cinemas/cinema.model';
 
 @Component({
   selector: 'app-reservation-detail',

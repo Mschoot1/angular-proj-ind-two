@@ -1,6 +1,4 @@
-import {Movie} from '../movies/movie.model';
 import {User} from '../users/user.model';
-import {Hall} from '../halls/hall.model';
 import {Schedule} from '../schedules/schedule.model';
 
 export class Reservation {

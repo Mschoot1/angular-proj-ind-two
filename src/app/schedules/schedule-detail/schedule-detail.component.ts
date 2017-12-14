@@ -4,7 +4,7 @@ import {Schedule} from '../schedule.model';
 import {ScheduleService} from '../schedule.service';
 import {Hall} from '../../halls/hall.model';
 import {Movie} from '../../movies/movie.model';
-import {Cinema} from '../../../../../angular-proj-ind-two/src/app/cinemas/cinema.model';
+import {Cinema} from '../../cinemas/cinema.model';
 
 @Component({
   selector: 'app-schedule-detail',

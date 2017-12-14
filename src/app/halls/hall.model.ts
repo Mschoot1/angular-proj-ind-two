@@ -1,4 +1,4 @@
-import {Cinema} from '../../../../angular-proj-ind-two/src/app/cinemas/cinema.model';
+import {Cinema} from '../cinemas/cinema.model';
 
 export class Hall {
 

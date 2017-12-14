@@ -30,6 +30,7 @@ import {MovieService} from './movies/movie.service';
 import {ReservationService} from './reservations/reservation.service';
 import {ScheduleService} from './schedules/schedule.service';
 import {HallService} from './halls/hall.service';
+import {UsersComponent} from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import {HallService} from './halls/hall.service';
     RegisterComponent,
     LoginComponent,
     CinemasComponent,
+    UsersComponent,
     ScheduleEditComponent,
     ScheduleDetailComponent,
     ReservationsComponent,
