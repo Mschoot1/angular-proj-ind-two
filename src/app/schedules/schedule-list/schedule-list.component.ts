@@ -27,7 +27,7 @@ export class ScheduleListComponent implements OnInit {
       .then(schedules => this._schedules = schedules)
       .catch(error => console.log(error));
     this.subscription = this.scheduleService.schedulesChanged
-      .subscribe((schedules: Schedule[]) => {
+      .subscribe(schedules => {
           this._schedules = schedules;
         }
       );

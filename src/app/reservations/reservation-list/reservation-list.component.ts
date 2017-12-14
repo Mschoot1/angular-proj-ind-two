@@ -28,7 +28,7 @@ export class ReservationListComponent implements OnInit {
       .then(reservations => this._reservations = reservations)
       .catch(error => console.log(error));
     this.subscription = this.reservationService.reservationsChanged
-      .subscribe((reservations: Reservation[]) => {
+      .subscribe(reservations => {
           this._reservations = reservations;
         }
       );
